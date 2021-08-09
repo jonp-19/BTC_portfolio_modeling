@@ -1,9 +1,10 @@
 #%%
+from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 
 #TODO docstring needs work.  Formatting is wrong.
-def model_btc_portfolio(start_date, end_date, initial_invest, bank, high_mark, low_mark):
+def model_btc_portfolio(start_date: datetime, end_date: datetime, initial_invest: int, bank: int, high_mark: int, low_mark: int):
     """Inputs:
         start_date must be "YYYY-MM-DD"
         end_date must be "YYYY_MM_DD"
@@ -61,6 +62,7 @@ def model_btc_portfolio(start_date, end_date, initial_invest, bank, high_mark, l
 
     total_balance = list((a + b for a,b in zip(current_holdings_list, balance)))
     print(total_balance[-1])
+    plot_balance(dates, total_balance)
 
 #TODO need to fix plotting.  can't seem to use lists created by first function
 def plot_balance(dates, total_balance):
@@ -80,6 +82,6 @@ def plot_balance(dates, total_balance):
 
     plt.show()
 
-model_btc_portfolio("2021-04-24", "2021-04-28", 5000, 5000, 5200, 5000)
+model_btc_portfolio("2015-04-24", "2021-04-28", 5000, 5000, 5200, 5000)
 
 # %%
