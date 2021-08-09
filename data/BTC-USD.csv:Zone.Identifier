@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://finance.yahoo.com/quote/BTC-USD/history?p=BTC-USD
+HostUrl=https://query1.finance.yahoo.com/v7/finance/download/BTC-USD?period1=1412121600&period2=1627516800&interval=1d&events=history&includeAdjustedClose=true
