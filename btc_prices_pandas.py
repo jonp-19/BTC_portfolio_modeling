@@ -70,7 +70,6 @@ def plot_balance(dates, total_balance):
     plt.style.use('seaborn')
     fig, ax = plt.subplots()
     ax.plot(dates, total_balance, c='red', alpha=0.5)
-    #ax.fill_between(sitka_dates, sitka_highs, sitka_lows, facecolor='blue', alpha=0.1)
 
     # Format plot.
     ax.set_title(f"BTC Balance Retention", fontsize=24)
@@ -78,7 +77,6 @@ def plot_balance(dates, total_balance):
     fig.autofmt_xdate()
     ax.set_ylabel("USD", fontsize=16)
     ax.tick_params(axis='both', which='major', labelsize=16)
-    #plt.ylim([(min(sitka_lows+death_lows)-5), (max(sitka_highs+death_highs)+5)])
 
     plt.show()
 
