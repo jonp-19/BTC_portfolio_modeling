@@ -66,7 +66,6 @@ def model_btc_portfolio(
     print(total_balance[-1])
     plot_balance(dates, total_balance)
 
-#TODO need to fix plotting.  can't seem to use lists created by first function
 def plot_balance(dates, total_balance):
     # Plot the BTC close prices
     plt.style.use('seaborn')
