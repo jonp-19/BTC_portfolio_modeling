@@ -27,8 +27,7 @@ def model_btc_portfolio(start_date: datetime, end_date: datetime, initial_invest
     dates = (dated_frame.loc[:, 'Date'])
 
     # set initial lists
-    shares, balance, = [], []
-    current_holdings_list = []
+    shares, balance, current_holdings_list = [], [], []
 
     # Run though dates that were set earlier.  Purchase, set, or hold based on 
     # value of portfolio.  Try/except sets up initial purchase.
