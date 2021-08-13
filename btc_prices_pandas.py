@@ -2,19 +2,22 @@
 from datetime import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
+from pandas.core.frame import DataFrame
 
 #TODO docstring needs work.  Formatting is wrong.
-def model_btc_portfolio(start_date: datetime, end_date: datetime, initial_invest: int, bank: int, high_mark: int, low_mark: int):
+def model_btc_portfolio(
+    start_date: datetime, end_date: datetime, initial_invest: int, bank: int, high_mark: int, low_mark: int
+    ) -> DataFrame:
     """Inputs:
-        start_date must be "YYYY-MM-DD"
-        end_date must be "YYYY_MM_DD"
-        initial_invest is the funds used for initial investment
-        bank is amount of funds set aside for additional purchases
-        high mark is the highest portfolio value will go before selling
-        low mark is the lowest portfolio value will go before buying
+            start_date must be "YYYY-MM-DD"
+            end_date must be "YYYY_MM_DD"
+            initial_invest is the funds used for initial investment
+            bank is amount of funds set aside for additional purchases
+            high mark is the highest portfolio value will go before selling
+            low mark is the lowest portfolio value will go before buying
         Returns:
-        dataframe with dates, close_prices, current_holdings_list, shares, balance
-        final total holdings amount
+            dataframe with dates, close_prices, current_holdings_list, shares, balance
+            final total holdings amount
         """
     # create a dataframe of BTC price information
     df = pd.read_csv('data/BTC-USD.csv', parse_dates=['Date'])
