@@ -79,11 +79,13 @@ class BTCModel(object):
 
     def getTotalBalance(self, dates, close_prices, current_holdings_list, shares, balance):
         self.new_df = pd.DataFrame(list(zip(self.dates, self.close_prices, self.current_holdings_list, self.shares, self.balance)))
-        print(self.new_df)
         self.new_df.to_csv(f'{self}BTC_growth.csv')
 
         self.total_balance = list((a + b for a,b in zip(self.current_holdings_list, self.balance)))
-        print(self.total_balance[-1])
+        print(
+            f"final balance from {self.start_date} to {self.end_date}"
+            f" maintaining between ${self.low_mark} and ${self.high_mark} was ${self.total_balance[-1]}"
+            )
 
 #model_btc_portfolio("2015-04-24", "2021-04-28", 5000, 5000, 5200, 5000)
 # %%
